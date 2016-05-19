@@ -1,7 +1,5 @@
 'use strict';
 var sieveFunc = require('./sieve');
-var sieveObj  = require('./sieve-object');
-var sieveFunc2  = require('./sieve-func');
 var Benchmark = require('Benchmark');
 
 var suite = new Benchmark.Suite;
@@ -14,12 +12,6 @@ suite.add('sieve - iterate', function() {
     })
     .add('sieve - mutate', function() {
         sieveFunc.getPrimes('mutate', TEST_LIMIT);
-    })
-    .add('sieve functional', function() {
-        sieveFunc2.getPrimes(TEST_LIMIT);
-    })
-    .add('sieve object', function() {
-        sieveObj.getPrimes(TEST_LIMIT);
     })
     .on('complete', function() {
         this.each(function(result) {

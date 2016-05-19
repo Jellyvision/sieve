@@ -4,7 +4,8 @@
   "description": "Sieve of Eratosthenes",
   "main": "sieve.js",
   "scripts": {
-    "test": "istanbul cover _mocha test"
+    "test": "istanbul cover _mocha test",
+    "perf": "node perf.js"
   },
   "repository": {
     "type": "git",
